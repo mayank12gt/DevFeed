@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+
+    app:cardElevation="0dp"
+    app:cardCornerRadius="8dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="6dp"
+
+
+
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="3dp"
+        android:paddingVertical="2dp"
+
+
+        >
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/post_Image"
+            android:layout_width="80dp"
+            android:padding="4dp"
+            android:background="@drawable/image_bg"
+            android:layout_height="80dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+
+            android:scaleType="fitCenter"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="8dp" />
+
+
+        <TextView
+            android:id="@+id/post_Title"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="4dp"
+
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+
+            android:lineHeight="20sp"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance20Bold"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/post_Date"
+            app:layout_constraintEnd_toStartOf="@+id/post_Image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="As Inferno Grew, Lahaina’s water system collapsed " />
+
+
+        <TextView
+            android:id="@+id/post_Date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="2dp"
+            android:includeFontPadding="false"
+            android:textAppearance="@style/TextAppearance14"
+            android:textColor="#474646"
+
+
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/post_Source"
+            app:layout_constraintEnd_toEndOf="@+id/post_Title"
+            app:layout_constraintStart_toStartOf="@+id/post_Title"
+            android:text="15 Sep, 2023" />
+
+        <TextView
+            android:id="@+id/post_Source"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance14"
+            android:textColor="#474646"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+
+            app:layout_constraintEnd_toEndOf="@+id/post_Title"
+            app:layout_constraintStart_toStartOf="@+id/post_Title"
+            tools:text="Better Programming - Medium" />
+
+        <ImageButton
+            android:id="@+id/bookmark_btn"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginHorizontal="0dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/bookmark_btn_bg"
+            android:src="@drawable/bookmark_add_icon"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/post_Image"
+            app:layout_constraintVertical_bias="0.5" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
